@@ -84,7 +84,7 @@ export default function Home() {
       description:
         "My personal site using Next.js, Tailwind, and shadcn. Focus on speed, accessibility, and playful visuals.",
       stack: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui"],
-      img: "/porto.png",
+      img: "/porto.PNG",
       links: {
         demo: "https://dhirojap.vercel.app",
         github: "https://github.com/dhirojap/portfolio",
@@ -102,7 +102,7 @@ export default function Home() {
         "Pinecone",
         "Uploadthing",
       ],
-      img: "/zoyaa.png",
+      img: "/zoyaa.PNG",
       links: {
         demo: "https://zoyaa.vercel.app",
         github: "https://github.com/dhirojap/zoyaa",
@@ -113,7 +113,7 @@ export default function Home() {
       description:
         "Indonesia Government national certificate numbering website",
       stack: ["Laravel", "SQL Server", "MySQL"],
-      img: "/pisn.png",
+      img: "/pisn.PNG",
       links: {
         demo: "https://pisn.kemdiktisaintek.go.id/",
         github: "https://github.com/ijazahln/psn",
