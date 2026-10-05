@@ -4,7 +4,14 @@ import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import Image from 'next/image';
-import { FaCss3, FaFigma, FaGithub, FaHtml5, FaJava } from 'react-icons/fa';
+import {
+  FaCss3,
+  FaFigma,
+  FaGithub,
+  FaHtml5,
+  FaJava,
+  FaVial,
+} from 'react-icons/fa';
 import {
   TbBrandNextjs,
   TbBrandJavascript,
@@ -18,6 +25,17 @@ import { CiGlobe } from 'react-icons/ci';
 import { SiDotnet, SiExpress, SiMysql } from 'react-icons/si';
 import { DiMsqlServer } from 'react-icons/di';
 import { RiTailwindCssFill } from 'react-icons/ri';
+import {
+  MdSmartToy,
+  MdDocumentScanner,
+  MdAnalytics,
+  MdAssignment,
+  MdFactCheck,
+  MdSearch,
+  MdGroups,
+  MdAutoAwesome,
+  MdAccountTree,
+} from 'react-icons/md';
 
 type TabKey = 'education' | 'experience' | 'skills' | 'projects';
 
@@ -26,32 +44,42 @@ export default function Home() {
 
   const education = [
     {
-      year: '2020-2023',
-      name: 'SMA Santo Kristoforus 2',
-      major: 'Ilmu Pengetahuan Sosial',
-      img: '/kristo.png',
-      desc: 'Learning basic programming knowledge.',
-    },
-    {
-      year: '2023–2027',
+      year: 'Sep 2023 – Sep 2027',
       name: 'BINUS University',
-      major: 'Information Systems',
-      img: '/binus.png',
-      desc: 'Focus on web development and project management skills. Building personal projects alongside coursework.',
+      major: 'Information Systems (Digital Technology)',
+      img: '/binuslogo.png',
+      desc: 'Focus on developing knowledge in information systems analysis and design, business processes, database systems, and website development',
     },
   ];
 
   const experience = [
     {
+      year: 'Feb 2026 - Feb 2027',
+      name: 'Business Analyst (Internship)',
+      company: 'PT Bank Central Asia Tbk',
+      img: '/bcalogo.png',
+      desc: 'Explore, define requirements, deliver, and manage automation products involving RPA, OCR, and Generative AI',
+    },
+    {
       year: 'Mar 2024 - Feb 2025',
-      name: 'Intern (System Analyst)',
-      major: 'IT Division BINUS',
-      img: '/itbinus.jpg',
-      desc: 'Reviewing pull request, creating automated E2E testing, designing wireframes.',
+      name: 'System Analyst (Intern)',
+      company: 'IT Division BINUS',
+      img: '/itbinus.jfif',
+      desc: 'Reviewing pull request, creating automated E2E testing, designing wireframes',
     },
   ];
 
   const skills = [
+    { label: 'Project Management', Icon: MdAssignment },
+    { label: 'Requirements Gathering', Icon: MdSearch },
+    { label: 'Business Process Analysis', Icon: MdAnalytics },
+    { label: 'Functional Requirements', Icon: MdAccountTree },
+    { label: 'Stakeholder Management', Icon: MdGroups },
+    { label: 'RPA', Icon: MdSmartToy },
+    { label: 'UiPath', Icon: MdSmartToy },
+    { label: 'OCR', Icon: MdDocumentScanner },
+    { label: 'Generative AI', Icon: MdAutoAwesome },
+    { label: 'Manual Testing', Icon: MdFactCheck },
     { label: 'HTML', Icon: FaHtml5 },
     { label: 'JavaScript', Icon: TbBrandJavascript },
     { label: 'TypeScript', Icon: TbBrandTypescript },
@@ -61,6 +89,7 @@ export default function Home() {
     { label: 'Express JS', Icon: SiExpress },
     { label: 'Next JS', Icon: TbBrandNextjs },
     { label: 'React', Icon: TbBrandReact },
+    { label: 'Playwright', Icon: FaVial },
     { label: '.NET', Icon: SiDotnet },
     { label: 'Tailwind', Icon: RiTailwindCssFill },
     { label: 'MySQL', Icon: SiMysql },
@@ -101,17 +130,6 @@ export default function Home() {
         github: 'https://github.com/dhirojap/zoyaa',
       },
     },
-    {
-      title: 'PISN',
-      description:
-        'Indonesia Government national certificate numbering website',
-      stack: ['Laravel', 'SQL Server', 'MySQL'],
-      img: '/psn.png',
-      links: {
-        demo: 'https://pisn.kemdiktisaintek.go.id/',
-        github: 'https://github.com/ijazahln/psn',
-      },
-    },
   ];
 
   const tabs: { key: TabKey; label: string }[] = [
@@ -149,7 +167,7 @@ export default function Home() {
             {/* Avatar */}
             <div className="relative w-28 aspect-[3/4] sm:w-32 md:w-36 border-2 border-black overflow-hidden bg-muted mx-auto sm:mx-0">
               <Image
-                src="/avatar.png"
+                src="/profile.jpg"
                 alt="Dhiro Jap"
                 fill
                 sizes="(max-width: 640px) 7rem, (max-width: 768px) 8rem, 9rem"
@@ -163,15 +181,16 @@ export default function Home() {
                 Student @ BINUS University
               </h1>
               <p className="mt-2 text-sm md:text-base text-muted-foreground leading-relaxed">
-                Hello, my name is Dhiro Jap and I am an Information Systems
-                student at BINUS University, expected to graduate in 2027. I am
-                highly motivated and enthusiastic about collaborating in teams
-                and continuously improving my skills. With a strong interest in
-                technology, I am eager to learn and grow further, especially in
-                the field of website development. My main focus is backend
-                development, where I enjoy building efficient and reliable
-                systems. I am also working on personal projects to sharpen my
-                abilities and prepare myself for future career opportunities.
+                Hello, my name is Dhiro Jap and I am a final-year Information
+                Systems student at BINUS University. I am highly motivated and
+                enthusiastic about collaborating in teams, solving problems, and
+                continuously improving my technical and analytical skills. With
+                a strong interest in technology, I am eager to learn and grow
+                further, especially in the field of automation and AI. Alongside
+                my academic studies and professional experience, I work on
+                personal projects to sharpen my abilities and explore new
+                technologies. I am eager to continue learning and growing while
+                building meaningful solutions that create value.
               </p>
             </div>
           </div>
@@ -205,29 +224,35 @@ export default function Home() {
                   {education.map((e) => (
                     <li
                       key={e.name + e.year}
-                      className="grid grid-cols-[3rem,1fr] sm:grid-cols-[3.5rem,1fr] md:grid-cols-[4rem,1fr] gap-3 items-center"
+                      className="flex gap-4 border-2 border-black bg-white p-3 shadow-[2px_2px_0_#000]"
                     >
-                      <div className="relative h-12 sm:h-14 md:h-16 border-2 border-black bg-white overflow-hidden">
+                      <div className="relative size-24 shrink-0 overflow-hidden border-2 border-black bg-white">
                         <Image
                           src={e.img}
                           alt={e.name}
                           fill
-                          sizes="(max-width:640px) 3rem, (max-width:768px) 3.5rem, 4rem"
-                          className="object-contain p-1"
+                          sizes="96px"
+                          className="object-cover object-top"
+                          priority
                         />
                       </div>
-                      <div className="min-w-0">
-                        <div className="font-semibold text-sm md:text-base">
-                          {e.name}
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-start justify-between gap-2">
+                          <div>
+                            <h3 className="font-bold text-sm md:text-base">
+                              {e.name}
+                            </h3>
+                            <p className="text-xs md:text-sm font-medium">
+                              {e.major}
+                            </p>
+                          </div>
+                          <span className="shrink-0 border-black border-2 bg-accent px-2 py-0.5 text-[11px] md:text-xs font-semibold">
+                            {e.year}
+                          </span>
                         </div>
-                        <div className="text-xs md:text-sm text-muted-foreground">
-                          {e.year} • {e.major}
-                        </div>
-                        {e.desc && (
-                          <p className="text-xs md:text-sm mt-1 text-muted-foreground">
-                            {e.desc}
-                          </p>
-                        )}
+                        <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-relaxed">
+                          {e.desc}
+                        </p>
                       </div>
                     </li>
                   ))}
@@ -239,29 +264,35 @@ export default function Home() {
                   {experience.map((x) => (
                     <li
                       key={x.name + x.year}
-                      className="grid grid-cols-[3rem,1fr] sm:grid-cols-[3.5rem,1fr] md:grid-cols-[4rem,1fr] gap-3 items-center"
+                      className="flex gap-4 border-2 border-black bg-white p-3 shadow-[2px_2px_0_#000]"
                     >
-                      <div className="relative h-12 sm:h-14 md:h-16 border-2 border-black bg-white overflow-hidden">
+                      <div className="relative size-24 shrink-0 overflow-hidden border-2 border-black bg-white">
                         <Image
                           src={x.img}
                           alt={x.name}
                           fill
-                          sizes="(max-width:640px) 3rem, (max-width:768px) 3.5rem, 4rem"
-                          className="object-contain p-1"
+                          sizes="96px"
+                          className="object-cover object-top"
+                          priority
                         />
                       </div>
-                      <div className="min-w-0">
-                        <div className="font-semibold text-sm md:text-base">
-                          {x.name}
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-start justify-between gap-2">
+                          <div>
+                            <h3 className="font-bold text-sm md:text-base">
+                              {x.name}
+                            </h3>
+                            <p className="text-xs md:text-sm font-medium">
+                              {x.company}
+                            </p>
+                          </div>
+                          <span className="shrink-0 border-black border-2 bg-accent px-2 py-0.5 text-[11px] md:text-xs font-semibold">
+                            {x.year}
+                          </span>
                         </div>
-                        <div className="text-xs md:text-sm text-muted-foreground">
-                          {x.year} • {x.major}
-                        </div>
-                        {x.desc && (
-                          <p className="text-xs md:text-sm mt-1 text-muted-foreground">
-                            {x.desc}
-                          </p>
-                        )}
+                        <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-relaxed">
+                          {x.desc}
+                        </p>
                       </div>
                     </li>
                   ))}
@@ -270,19 +301,19 @@ export default function Home() {
 
               {tab === 'skills' && (
                 <div
-                  className="grid grid-template gap-2"
+                  className="grid gap-2"
                   style={{
                     gridTemplateColumns:
-                      'repeat(auto-fill, minmax(min(160px, 100%), 1fr))',
+                      'repeat(auto-fill, minmax(min(180px, 100%), 1fr))',
                   }}
                 >
                   {skills.map(({ label, Icon }) => (
                     <span
                       key={label}
-                      className="inline-flex items-center gap-1.5 rounded-none border-2 border-black bg-white px-2 py-1 text-xs md:text-sm font-medium shadow-[2px_2px_0_#000]"
+                      className="flex min-w-0 items-center gap-1.5 rounded-none border-2 border-black bg-white px-2 py-1.5 text-xs font-medium shadow-[2px_2px_0_#000] md:text-sm"
                     >
-                      <Icon className="size-4 md:size-5 shrink-0" />
-                      <span className="truncate">{label}</span>
+                      <Icon className="size-4 shrink-0 md:size-5" />
+                      <span className="leading-tight">{label}</span>
                     </span>
                   ))}
                 </div>
@@ -293,14 +324,14 @@ export default function Home() {
                   {projects.map((p) => (
                     <article
                       key={p.title}
-                      className="grid gap-3 sm:grid-cols-2 md:grid-cols-[220px,1fr] border-2 border-black bg-white shadow-[2px_2px_0_#000] p-3"
+                      className="grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(280px,1fr)] border-2 border-black bg-white shadow-[2px_2px_0_#000] p-3"
                     >
-                      <div className="relative w-full aspect-[16/10] md:aspect-[4/3] border-2 border-black bg-muted overflow-hidden">
+                      <div className="relative w-full aspect-video border-2 border-black bg-muted overflow-hidden">
                         <Image
                           src={p.img}
                           alt={p.title}
                           fill
-                          sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 420px"
+                          sizes="(max-width:768px) 100vw, 60vw"
                           className="object-contain"
                         />
                       </div>
