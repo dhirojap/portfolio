@@ -62,9 +62,9 @@ export default function Home() {
     },
     {
       year: 'Mar 2024 - Feb 2025',
-      name: 'System Analyst (Intern)',
+      name: 'System Analyst (Contract)',
       company: 'IT Division BINUS',
-      img: '/itbinus.jfif',
+      img: '/itbinuslogo.jpeg',
       desc: 'Reviewing pull request, creating automated E2E testing, designing wireframes',
     },
   ];
